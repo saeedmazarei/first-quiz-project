@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form</title>
+    <link href="./style.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section id="form-section">
+        <div id="container">
+            <div class="image-container">
+                <img src="./logo-new1.png">
+            </div>
+            <form action="" method="post">
+                <label for="title" class="center"><h4 style="margin-bottom: 0px;">Topic Title</h4></label>
+                <input id="title" name="title" placeholder="writte a title for your article" type="text" minlength="5" maxlength="50" required="required" class="input">
+                <label for="article" class="center"><h4 style="margin-bottom: 2%;">Enter your article</h4></label>
+                <textarea id="article" name="body" placeholder="writte your article here" required class="input"></textarea>
+                <label for="writter-name" class="center"><h4 style="margin-bottom: 2%;">choose writter name</h4></label>
+                <select id="writter-name" name="writter-name">
+                </select><br><br>
+                <input id="send-post" class="button" type="submit" value="submit" onclick="formValidation()">
+                <br><br>
+            </form>
+        </div>
+    </section>
+    <section id="panel-section">
+        <table id="post-table" class="table">
+            <thead>
+                <th>id</th>
+                <th>post title</th>
+                <th>writter name</th>
+                <th>operation</th>
+            </thead>
+            <tbody id="t-body">
+                
+            </tbody>
+        </table>
+    </section>
+    <div id="myModal" class="modal">
+        <div class="modal-content" id="modal-table">
+          <span class="close">&times;</span>
+          <div id="comment-section">
+            
+          </div>
+
+          <!--
+          <table id="comment-table" class="table">
+            <thead>
+                <th class = "header">name</th>
+                <th class = "header">email</th>
+                <th class = "header">comment</th>
+            </thead>
+            <tbody id="comment-body">
+
+            </tbody>
+          </table>
+          -->
+        </div>
+    </div>
+    <script src="./Form.js"></script>
+    <script src="./main.js"></script>
+    <script src="./edit-function.js"></script>
+    <script src="./delete-function.js"></script>
+    <script src="./comment-function.js"></script>
+</body>
+</html>
